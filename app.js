@@ -14,12 +14,12 @@ const indexController = require('./controllers/indexController');
 const loginController = require('./controllers/loginController');
 const menteeDashController = require('./controllers/menteeDashController');
 const adminEventController = require('./controllers/adminEventController');
-const Resume = require('./models/resume');  // Updated path
-const User = require('./models/user');      // Updated path
-const Event = require('./models/adminEvents');  // Updated path
-const Mentor = require('./models/adminMentor'); // Updated path
-const upload = require('./middlewares/upload'); // Updated path
-const Mentee = require('./models/adminMentee');  // Updated path
+const Resume = require('./models/resume');
+const User = require('./models/user');
+const Event = require('./models/adminEvents'); // Corrected model import
+const Mentor = require('./models/adminMentor');
+const upload = require('./middlewares/upload');
+const Mentee = require('./models/adminMentee');
 
 // Set the view engine
 app.set('view engine', 'ejs');
