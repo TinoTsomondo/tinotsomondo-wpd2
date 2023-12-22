@@ -1,0 +1,41 @@
+<!-- addMentor.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Mentor</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Add Mentor</h1>
+    <form action="/adminDash/mentor/add-mentor" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="expertise">Expertise:</label>
+                </td>
+                <td>
+                    <input type="text" id="expertise" name="expertise" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="description">Description:</label>
+                </td>
+                <td>
+                    <textarea id="description" name="description" required></textarea>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Add Mentor</button>
+    </form>
+</body>
+</html>

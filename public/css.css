@@ -1,0 +1,77 @@
+/* public/css/styles.css */
+
+/* Reset some default margin and padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Styles for the first container */
+.container1 {
+  position: fixed; /* Make the container fixed */
+  top: 0; /* Stick it to the top */
+  left: 0; /* Stick it to the left */
+  background-color: white;
+  padding-top: 20px;
+  padding-right: 20px;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img {
+  height: 100px; /* Adjust the height based on your logo size */
+}
+
+.navbar nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar nav ul li {
+  margin-right: 20px;
+  color: black; /* Update text color to black */
+}
+
+.imgbgd {
+  padding-top: 100px;
+  display: flex;
+  width: 100%;
+  height: 25%;
+}
+
+.container2 {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 100px;
+}
+
+.responsive-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #92613A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.imgbgd {
+  width: 100vw; /* Use viewport width to cover the entire width of the page */
+  height: 100%; /* Set height to 100% to cover the entire container */
+  object-fit: cover; /* Cover the entire container without maintaining aspect ratio */
+}
+
+.imgbgd2 {
+  width: 100vw; /* Use viewport width to cover the entire width of the page */
+  height: 100vh; /* Use viewport height to cover the entire height of the page */
+  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+}

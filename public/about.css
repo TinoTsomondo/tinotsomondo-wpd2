@@ -1,0 +1,76 @@
+/* about.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Styles for the first container */
+.container1 {
+    position: fixed; /* Make the container fixed */
+    top: 0; /* Stick it to the top */
+    left: 0; /* Stick it to the left */
+    background-color: white;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img {
+    height: 100px; /* Adjust the height based on your logo size */
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-right: 20px;
+}
+
+.imgbgd {
+    padding-top: 100Px;
+    display: flex;
+    width: 100%;
+    height: 25%;
+}
+
+.container2 {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-button {
+    display: inline-block;
+    padding: 16px 32px; /* Increased padding for a larger button */
+    font-size: 18px; /* Increased font size */
+    text-align: center;
+    text-decoration: none;
+    background-color: #92613A;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.responsive-button:hover {
+    background-color: #0056b3;
+}
+
+.imgbgd2 {
+    display: flex;
+    width: 100%;
+    height: 25%;
+}

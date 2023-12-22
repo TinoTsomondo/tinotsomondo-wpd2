@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    padding-bottom: 200px; /* Adjust the value as needed */
+}
+
+.container1 {
+    width: 100%;
+    height: 6%;
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.container1 .navbar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    padding-top: 0%;
+}
+
+.container1 .navbar img {
+    width: 135px;
+    height: 135px;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.imgbgd {
+    padding-top: 12%;
+    display: flex;
+    width: 100%;
+    height: 25%;
+}
+
+.category-container {
+    display: inline-block;
+    width: 25%;
+    height: 300px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    /* Remove padding-bottom */
+    /* padding-bottom: 300px; */
+    padding-left: 75px;
+}
+
+/* Style the opportunity containers */
+.opportunity-container {
+    background-color: #92613a;
+    padding: 20px;
+    height: 100%;
+    overflow: hidden; /* Ensure the container doesn't expand if the image is larger */
+    position: relative; /* Added for positioning the button */
+}
+
+/* Style the opportunity cards */
+.opportunity-card {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #160427;
+    background-color: #9e0e0e;
+}
+
+/* Style the opportunity container images */
+.opportunity-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style the action button */
+.action-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #92613a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1; /* Ensure the button is on top of the image */
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Mentee</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Edit Mentee</h1>
+    <form action="/mentee/edit-mentee/<%= mentee._id %>" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="<%= mentee.name %>" required>
+        <label for="expertise">Degree Program</label>
+        <input type="text" id="expertise" name="expertise" value="<%= mentee.expertise %>" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" value="<%= mentee.email %>" required>
+        <button type="submit">Update Mentee</button>
+    </form>
+</body>
+</html>

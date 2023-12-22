@@ -1,0 +1,57 @@
+/* public/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-card {
+    background-color: #92613A;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 15px;
+    width: calc(33.33%); /* 30px is the total margin space (15px on each side) */
+    text-align: center;
+}
+
+.event-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2, h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+p {
+    color: white;
+}

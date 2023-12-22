@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="menteeDashhome.css">
+</head>
+<body>
+
+    <div class="container1">
+        <div class="navbar">
+            <img src="./media/logo.png" alt="">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <img src="./media/mentoring svg.svg" alt="Canva SVG" class="imgbgd">
+
+    <main>
+        <section id="career" class="category-container">
+            <h2>Career Advice</h2>
+            <div class="opportunity-container" id="career-opportunities">
+                <!-- Add image for Career Advice -->
+                <img src="./media/careeradvice.jpg" alt="Career Advice Image">
+                <!-- Career advice mentoring opportunities will be dynamically generated here -->
+                <button class="action-button" onclick="location.href='link-to-career-advice-page'">Chart Your Career</button>
+            </div>
+        </section>
+
+        <section id="interview" class="category-container">
+            <h2>Mock Interviews</h2>
+            <div class="opportunity-container" id="interview-opportunities">
+                <!-- Add image for Mock Interviews -->
+                <img src="./media/mockinterview.jpg" alt="Mock Interviews Image">
+                <!-- Mock interview mentoring opportunities will be dynamically generated here -->
+                <button class="action-button" onclick="location.href='/menteeDash/resumeCenter'">Mock Interview Prep</button>
+            </div>
+        </section>
+
+        <section id="resume" class="category-container">
+            <h2>Resume Review</h2>
+            <div class="opportunity-container" id="resume-opportunities">
+                <!-- Add image for Resume Review -->
+                <img src="./media/resumereview.jpg" alt="Resume Review Image">
+                <!-- Resume review mentoring opportunities will be dynamically generated here -->
+                <button class="action-button" onclick="location.href='/resume-center'">Resume Center</button>
+
+            </div>
+        </section>
+
+
+        <div class="event-container">
+            <% let uniqueCategories = [...new Set(events.map(event => event.category))]; %>
+    
+            <% uniqueCategories.forEach(function(category) { %>
+                <!-- Display category heading for each unique category -->
+                <h2><%= category %></h2>
+                <% events.filter(event => event.category === category).forEach(function(event) { %>
+                    <div class="event-card">
+                        <img src="/media/<%= event.image %>" alt="<%= event.title %> Image">
+                        <h2><%= event.name %></h2>
+                        <p><strong>Category:</strong> <%= event.category %></p>
+                        <p><strong>Description:</strong> <%= event.description %></p>
+                        <p><strong>Organizer:</strong> <%= event.organizer %></p>
+                        <p><strong>Venue:</strong> <%= event.venue %></p>
+                        <p><strong>Time:</strong> <%= event.time %></p>
+                    </div>
+                <% }); %>
+            <% }); %>
+        </div>
+       
+    </main>
+</body>
+</html>

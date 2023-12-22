@@ -1,0 +1,21 @@
+<!-- editMentor.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Mentor</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Edit Mentor</h1>
+    <form action="/adminDash/mentor/edit-mentor/<%= mentor._id %>" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= mentor.name %>" required>
+        <label for="expertise">Expertise:</label>
+        <input type="text" id="expertise" name="expertise" value="<%= mentor.expertise %>" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required><%= mentor.description %></textarea>
+        <button type="submit">Update Mentor</button>
+    </form>
+</body>
+</html>

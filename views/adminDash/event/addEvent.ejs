@@ -1,0 +1,70 @@
+<!-- views/adminDash/event/addEvent.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="/addevent.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Add New Event</h1>
+    <div class="row tm-mt-big">
+        <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
+            <div class="bg-white tm-block">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-block-title d-inline-block">Create Event</h2>
+                    </div>
+                </div>
+                <div class="row mt-4 tm-edit-product-row">
+                    <div class="col-xl-7 col-lg-7 col-md-12">
+                        <form action="/adminDash/event/add-event" method="post" id="add-form" enctype="multipart/form-data" class="tm-edit-product-form">
+                            <div class="input-group mb-3">
+                                <label for="category" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Category</label>
+                                <select class="custom-select col-xl-8 col-lg-8 col-md-8 col-sm-7" id="category" name="category" aria-required="true">
+                                    <option value="Career Advice">Career Advice</option>
+                                    <option value="Resume Review">Resume Review</option>
+                                    <option value="Mock Interview">Mock Interview</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label for="name" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Event Name</label>
+                                <input id="name" name="name" type="text" class="form-control validate col-xl-8 col-lg-8 col-md-8 col-sm-7" placeholder="Enter Event Name" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label for="description" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 mb-2 col-form-label">Description</label>
+                                <textarea name="description" id="description" class="form-control validate col-xl-8 col-lg-8 col-md-8 col-sm-7" rows="3" required></textarea>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label for="organizer" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Event Organizer</label>
+                                <input id="organizer" name="organizer" type="text" class="form-control validate col-xl-8 col-lg-8 col-md-8 col-sm-7" placeholder="Enter Event Organizer" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label for="venue" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Event Venue</label>
+                                <input id="venue" name="venue" type="text" class="form-control validate col-xl-8 col-lg-8 col-md-7 col-sm-7" placeholder="Enter Venue Location" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label for="time" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Time</label>
+                                <input id="time" name="time" type="text" class="form-control validate col-xl-8 col-lg-8 col-md-7 col-sm-7" placeholder="09:00 AM" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label for="image" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Event Image</label>
+                                <input type="file" name="image" class="form-control validate col-xl-8 col-lg-8 col-md-7 col-sm-7" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="ml-auto col-xl-8 col-lg-8 col-md-8 col-sm-7 pl-0">
+                                    <button type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                                <a href="/adminDash/event/list-events">Back to Events</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

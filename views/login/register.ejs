@@ -1,0 +1,50 @@
+<!-- register.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+  <div class="logo-container">
+    <img src="./media/logo.png" alt="Logo">
+  </div>
+
+  <h1>Create an Account</h1>
+
+  <div class="main-container">
+    <div class="registration-container">
+      <form action="/register" method="post">
+        <label for="fullname">Fullname:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="degreeProgram">Degree Program:</label>
+        <input type="text" id="degreeProgram" name="degreeProgram" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <div class="remember-password">
+          <input type="checkbox" id="rememberPassword" name="rememberPassword">
+          <label for="rememberPassword">Remember Password</label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="signin-container">
+    <p class="signin-text">Already Have An Account? <a href="/login" class="signin-link">Sign In</a></p>
+  </div>
+</body>
+</html>

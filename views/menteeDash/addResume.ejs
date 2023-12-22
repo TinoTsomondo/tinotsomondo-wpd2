@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Resume</title>
+    <link rel="stylesheet" href="addResume.css">
+</head>
+<body>
+    <h1>Add Resume</h1>
+    <form id="resumeForm" action="/add-resume" method="post" enctype="multipart/form-data">
+        <input type="file" name="resume" accept=".pdf, .doc, .docx">
+        <button type="submit" onclick="uploadResume()">Upload Resume</button>
+    </form>
+
+    <!-- Add the following script tag to define the uploadResume function -->
+    <script>
+        function uploadResume() {
+            // Implement the logic to handle resume upload
+            console.log('Resume upload logic here');
+            // You may want to make an AJAX request or perform other actions here
+        }
+    </script>
+</body>
+</html>

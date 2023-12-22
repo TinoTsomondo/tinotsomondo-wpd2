@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentors</title>
+    <link rel="stylesheet" type="text/css" href="/index.css">
+</head>
+<body>
+    <h1>Welcome to Mentors Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Expertise</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% mentees.forEach(function(mentee) { %>
+                <tr>
+                    <td><h2><%= mentee.name %></h2></td>
+                    <td><p><%= mentee.expertise %></p></td>
+                    <td><p><%= mentee.description %></p></td>
+                    <td>
+                        <a href="/adminDash/mentee/view-mentee/<%= mentee._id %>">View</a>
+                        <a href="/adminDash/mentee/edit-mentee/<%= mentee._id %>">Edit</a>
+                        <a href="/adminDash/mentee/delete-mentee/<%= mentee._id %>">Delete</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <a class="add-button" href="/adminDash/mentee/add-mentee">Add Mentee</a>
+
+</body>
+</html>

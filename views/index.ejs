@@ -1,0 +1,33 @@
+<!-- index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome to Mentor and Mentee</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css.css">
+</head>
+<body>
+  <div class="container1">
+    <div class="navbar">
+        <img src="<%= '/media/logo.png' %>" alt="">
+        
+      <nav>
+        <ul>
+          <li><a href="<%= homeLink %>">Home</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <img src="/media/home.svg" alt="First Part Image" class="imgbgd">
+
+  <div class="container2">
+    <a href="<%= getStartedLink %>" class="responsive-button">Get Started</a>
+    <img src="/media/Beige & Brown Aesthetic Skincare Website Landing Page Desktop Prototype.svg" alt="Second Part Image" class="imgbgd">
+
+  </div>
+</body>
+</html>

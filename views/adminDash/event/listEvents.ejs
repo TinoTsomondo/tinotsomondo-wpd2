@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/listEvents.css">
+</head>
+<body>
+    <h1>Upcoming Events</h1>
+    <!-- Add Event button -->
+    <a href="/adminDash/event/add-event-form">Add Event</a>
+
+    <!-- Add the event-container class here -->
+    <div class="event-container">
+        <% let uniqueCategories = [...new Set(events.map(event => event.category))]; %>
+
+        <% uniqueCategories.forEach(function(category) { %>
+            <!-- Display category heading for each unique category -->
+            <h2><%= category %></h2>
+
+            <% events.filter(event => event.category === category).forEach(function(event) { %>
+                <div class="event-card">
+                    <img src="/media/<%= event.image %>" alt="<%= event.title %> Image">
+                    <h2><%= event.name %></h2>
+                    <p><strong>Category:</strong> <%= event.category %></p>
+                    <p><strong>Description:</strong> <%= event.description %></p>
+                    <p><strong>Organizer:</strong> <%= event.organizer %></p>
+                    <p><strong>Venue:</strong> <%= event.venue %></p>
+                    <p><strong>Time:</strong> <%= event.time %></p>
+                    <!-- Edit and Delete links -->
+                    <p>
+                        <a href="/adminDash/event/delete-event/<%= event._id %>">Delete This Event</a>
+                        <a href="/adminDash/event/edit-event/<%= event._id %>">Edit This Event</a>
+                    </p>
+                </div>
+            <% }); %>
+        <% }); %>
+    </div>
+</body>
+</html>

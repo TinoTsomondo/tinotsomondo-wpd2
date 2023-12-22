@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentors</title>
+    <link rel="stylesheet" type="text/css" href="/index.css">
+</head>
+<body>
+    <h1>Welcome to Mentors Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Expertise</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% mentors.forEach(function(mentor) { %>
+                <tr>
+                    <td><h2><%= mentor.name %></h2></td>
+                    <td><p><%= mentor.expertise %></p></td>
+                    <td><p><%= mentor.description %></p></td>
+                    <td>
+                        <a href="/adminDash/mentor/view-mentor/<%= mentor._id %>">View</a>
+                        <a href="/adminDash/mentor/edit-mentor/<%= mentor._id %>">Edit</a>
+                        <a href="/adminDash/mentor/delete-mentor/<%= mentor._id %>">Delete</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <a class="add-button" href="/adminDash/mentor/add-mentor">Add Mentor</a>
+
+</body>
+</html>
